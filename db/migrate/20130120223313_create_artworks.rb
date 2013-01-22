@@ -8,6 +8,7 @@ class CreateArtworks < ActiveRecord::Migration
       t.integer :height
       t.string :medium
       t.integer :year
+      t.integer :art_group_id
 
       t.timestamps
     end
