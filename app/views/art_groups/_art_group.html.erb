@@ -1,0 +1,9 @@
+<div class="art_work_series_entry group">
+  <%= image_tag group.image.url, :alt => group.title, :class => "original", :width => 105, :height => 105 %>
+  <div class="series-info">
+    <h2>
+      <%= link_to group.title, art_group_path(group) %>
+    </h2>
+    <%= group.description %>
+  </div>
+</div>

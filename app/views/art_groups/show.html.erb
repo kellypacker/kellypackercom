@@ -1,0 +1,37 @@
+<div id="portfolio_header_wrap">
+  <div id="portfolio_header">
+    <span><a href="http://www.kellypacker.com" title="Home">kellypacker.com</a></span>
+    <h1><span>series:</span> <%= @group.title %></h1>
+    <ul id="main_nav_portfolio">
+      <li id="back-all-art">
+        <%= link_to "all art work", art_groups_path %>
+      </li>
+    </ul>
+  </div><!--/header-->
+</div>
+<div id="portfolio_content_wrap">
+  <div id="portfolio_content">
+    <div class="slideshow_super_wrap">
+      <% @works.each do |work| %>
+        <%= image_tag work.image.url, :alt => work.title, :class => "art-work-thumb", :width => 55, :height => 50 %>
+      <% end %>
+      <ul class="slideshow_wrap portfolio portfolio1" style="max-width: 600px;">
+        <% @works.each do |work| %>
+        <li id="portfolio1_s0" class="portfolio1_on" style="display: block; float: left; position: relative;">
+          <div class="art-work-entry ">
+            <img class="art_work_image" src="/images/art_work/bigpink_1.jpg" alt="you, a space worthwhile to lose">
+            <ul class="art-work-info">
+              <li class="title"><%= work.title %></li>
+              <li class="size"><%= work.width %>x<%= work.height %>"</li>
+              <li class="medium"><%= work.medium %></li>
+              <li class="year"><%= work.year %></li>
+            </ul>
+          </div><!--/art-work-entry-->
+        </li>
+        <% end %>
+      </ul>
+    </div><!-- slideshow_super_wrap -->
+    <div class="info_trigger">I</div>
+    <div class="info_wrap"></div>
+  </div><!--/content-->
+</div><!--/content_wrap-->
