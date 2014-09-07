@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def web_development
+    @body_class ="web-development"
   end
 
   def profile
