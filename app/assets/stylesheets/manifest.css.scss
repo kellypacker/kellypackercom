@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import 'elements/header';
+@import 'elements/footer';
 
 @import 'base';
+
+@import 'views/home';

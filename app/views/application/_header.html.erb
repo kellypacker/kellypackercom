@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Art Work</a></li>
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">Journal &amp; News</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><%= link_to "Web Development", web_development_path %></li>
+        <li><a href="http://journal.kellypacker.com" title="Tumblr Journal">Journal &amp; News</a></li>
+        <li><a href="http://store.kellypacker.com" title="Artwork Store on Squarespace">Store</a></li>
+        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>

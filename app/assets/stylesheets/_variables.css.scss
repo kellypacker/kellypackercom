@@ -106,7 +106,7 @@ $font-family-serif:       "adobe-garamond-pro", Georgia, "Times New Roman", Time
 // $line-height-large:         1.33;
 // $line-height-small:         1.5;
 
-// $border-radius-base:        4px;
+$border-radius-base:        0;
 // $border-radius-large:       6px;
 // $border-radius-small:       3px;
 
@@ -848,5 +848,5 @@ $navbar-default-link-hover-bg:             $gray-lighter;
 // ** Width of horizontal description list titles
 // $dl-horizontal-offset:        $component-offset-horizontal;
 // ** Horizontal line color.
-// $hr-border:                   $gray-lighter;
+$hr-border:                   $gray-light;
 
