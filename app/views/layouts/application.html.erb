@@ -1,82 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kellypacker</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <script type="text/javascript" src="//use.typekit.net/kzo1zax.js"></script>
+  <title>Kelly Packer</title>
+  <%= stylesheet_link_tag    "manifest", :media => "all" %>
+  <script type="text/javascript" src="//use.typekit.net/wnf3clz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body id="<%= @body_id %>">
-<header>
-  <div class="container" id="header">
-    <div class="five columns logo">
-      <h1><a href="/">kellypacker.com</a></h1>
-      <!--       <strong><a href="/">kellypacker.com</a></strong>-->
-    </div>
-    <div class="eleven columns">
-      <nav>
-        <ul id="main_nav" class="group">
-          <li id="art-work"><a href="/art-work">art work</a></li>
-          <li id="web-design"><a href="/web">web</a></li>
-          <li id="news"><a href="http://journal.kellypacker.com">journal &amp; news</a></li>
-          <li id="profile"><a href="/profile">profile</a></li>
-          <li id="store"><a href="http://kellypacker.etsy.com">store</a></li>
-          <li id="contact" ><a  href="/contact">contact</a></li>
-        </ul>
-      </nav>
-    </div>
+<body class="<%= "#{controller.controller_name} #{@body_class}".strip %>">
+<div class="container">
+  <%= render 'header' %>
+  <%= yield %>
+  <%= render 'footer' %>
+</div>
 
-  </div><!--/header_wrap-->
-</header>
-
-<%= yield %>
-
-<footer>
-  <div class="container group" id="footer">
-    <div id="subscribe" class="group five columns">
-      <div id="mc_embed_signup">
-      <form action="http://kellypacker.us1.list-manage.com/subscribe/post?u=eb6530a0e5ecc8f1833899b8c&amp;id=51d1397857" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-      <h6>Subscribe <span>for</span> Updates</h6>
-      <p>Sign up to receive messages about upcoming shows, a new body of work or other big happenings. I promise to keep your e-mail safe. </p>
-        <fieldset>
-
-      <div class="mc-field-group">
-      <input type="text" value="Email" name="EMAIL" class="required email" onclick="this.select()" id="mce-EMAIL">
-      </div>
-          <div id="mce-responses">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>
-          <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-        </fieldset>
-      </form>
-      </div>
-      <!--End mc_embed_signup-->
-    </div><!-- /subscribe -->
-    <div id="around" class="group four columns">
-      <h6>Everywhere</h6>
-      <ul>
-        <li><a href="http://www.flickr.com/photos/kellypacker/collections/72157606984861567/" title="Kelly Packer's Flickr Photos">Flickr</a></li>
-        <li><a href="http://kellypacker.etsy.com/" title="Kelly Packer's Etsy Shop">My Etsy Shop</a></li>
-        <li><a href="http://www.twitter.com/kellypacker/" title="Kelly Packer on Twitter">Twitter</a></li>
-        <li><a href="https://github.com/kellypacker" title="Kelly Packer on Github">Github</a></li>
-        <li><a href="http://www.linkedin.com/in/kellypacker" title="Kelly Packer on LinkedIn">LinkedIn</a></li>
-        <li><a href="http://zerply.com/kellypacker" title="Kelly Packer on Zerply">Zerply</a></li>
-        <li><a href="http://www.creativesoapbox.com/journal/" title="Creative Soapbox Journal">Creative Soapbox Journal</a></li>
-      </ul>
-    </div><!-- colophon -->
-
-    <div id="colophon" class="group seven columns">
-      <h6>Colophon</h6>
-      <p>This site is built on Rails.</p>
-    </div><!-- colophon -->
-  </div><!-- footer-row -->
-  <div class="container group">
-    <div class="copyright"><p>&copy; 2003-2013 kelly packer. All rights reserved.</p></div>
-  </div><!-- footer-row -->
-</footer>
 
 
 </body>

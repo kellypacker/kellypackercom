@@ -1,0 +1,30 @@
+/* Main Nav
+--------------------------------------- */
+
+// Bootstrap overrides
+.navbar-default {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  margin-top: 15px;
+  .navbar-brand {
+    padding-left: 0;
+    font-size: 32px;
+    color: $brand-primary;
+  }
+  .navbar-brand:hover {
+    color: $brand-info;
+  }
+  .navbar-nav {
+    margin-top: 8px;
+    > li > a {
+      padding: 5px 8px;
+      margin: 0 3px;
+    }
+    > li > a:hover {
+      color: $brand-info;
+    }
+  }
+}

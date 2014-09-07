@@ -1,49 +1,36 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+ruby "2.1.0"
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '4.1.1'
+gem 'pg'
+gem 'unicorn'
+
+gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'compass-rails'
+gem 'uglifier', '>= 1.3.0'
+gem "paperclip", "~> 4.1"
+# gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
+gem 'jquery-rails'
+gem 'aws-sdk'
+# gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'formtastic'
+gem 'devise'
+# gem "meta_search",    '>= 1.1.0.pre'
 
 group :development do
-  gem 'pg'
-  gem 'rspec-rails', '2.6.1'
+  gem 'foreman'
+  gem 'better_errors'
+end
+
+group :development, :test do
+  gem 'debugger'
+  gem 'dotenv-rails'
 end
 
 group :production do
-  gem 'pg'
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end
-
-gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
-gem "meta_search",    '>= 1.1.0.pre'
-gem "paperclip", "~> 3.0"
-gem 'aws-sdk'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
