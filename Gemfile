@@ -13,7 +13,7 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem "autoprefixer-rails"
 gem 'uglifier', '>= 1.3.0'
 gem "paperclip", "~> 4.1"
-# gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
+gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
 gem 'jquery-rails'
 gem 'aws-sdk'
 gem 'formtastic'

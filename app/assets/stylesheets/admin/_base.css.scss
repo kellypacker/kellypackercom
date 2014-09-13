@@ -1,0 +1,10 @@
+.art_groups {
+  .nav-art-groups {
+    @extend .active;
+  }
+}
+.artworks {
+  .nav-artworks {
+    @extend .active;
+  }
+}

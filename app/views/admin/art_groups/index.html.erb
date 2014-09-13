@@ -1,0 +1,11 @@
+<div class="row admin-table-header">
+  <div class="col-md-12 clearfix">
+    <h1>Art Groups</h1>
+    <%= link_to("New Art Group", new_admin_art_group_path, class: "btn btn-primary pull-right") %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <%= render 'list' %>
+  </div>
+</div>

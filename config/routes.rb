@@ -1,7 +1,7 @@
 Kellypacker::Application.routes.draw do
 
-  get "/artwork" => "art_groups#index", :as => 'artwork'
-  get "/artwork/:title" => "art_groups#show", :as => 'art_group'
+  get "/artwork" => "art_groups#index", :as => "artwork"
+  get "/artwork/:title" => "art_groups#show", :as => "art_group"
   resources :artworks
 
   get "home/index"
@@ -11,5 +11,11 @@ Kellypacker::Application.routes.draw do
   get "/contact" => "pages#contact"
   get "/profile" => "pages#profile"
   get "/web-development" => "pages#web_development"
+
+  namespace :admin do
+    get "/" => "admin#dashboard", :as => "dashboard"
+    resources :art_groups
+    resources :artworks
+  end
 
  end

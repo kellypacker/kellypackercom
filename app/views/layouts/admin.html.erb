@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kelly Packer | Admin</title>
+  <%= stylesheet_link_tag    "admin/manifest", :media => "all" %>
+  <script type="text/javascript" src="//use.typekit.net/wnf3clz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <%= javascript_include_tag "admin/manifest" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="admin <%= "#{controller.controller_name} #{@body_class}".strip %>">
+<div class="container">
+  <%= render '/admin/admin/header' %>
+  <%= yield %>
+</div>
+
+</body>
+</html>
