@@ -16,10 +16,9 @@ gem "paperclip", "~> 4.1"
 # gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
 gem 'jquery-rails'
 gem 'aws-sdk'
-# gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
-gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'formtastic'
-gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'clearance'
 # gem "meta_search",    '>= 1.1.0.pre'
 
 group :development do

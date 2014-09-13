@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kelly Packer</title>
+  <title>Kelly Packer<% if @page_title.present? %> | <%= @page_title %><% end %></title>
+  <meta name="description" content="<%= @page_desc %>">
   <%= stylesheet_link_tag    "manifest", :media => "all" %>
   <script type="text/javascript" src="//use.typekit.net/wnf3clz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
