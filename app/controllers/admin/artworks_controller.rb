@@ -44,7 +44,9 @@ module Admin
     def artwork_params
       params.require(:artwork).permit(
         :available, :height, :medium, :sold, :title, :width,
-        :year, :image, :price, :art_group_id
+        :year, :image, :price, :art_group_id, :slug, :long_title, :notes,
+        :sold_to, :sale_date, :sale_location, :sale_notes, :sale_price,
+        :sales_tax_paid, :sales_tax_paid_date
       )
     end
 

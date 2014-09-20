@@ -37,7 +37,7 @@ class Artwork < ActiveRecord::Base
   end
 
   def generate_slug
-    if self.slug.present?
+    unless self.slug.present?
       generate_slug!
     end
   end
