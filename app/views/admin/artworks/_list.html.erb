@@ -1,0 +1,41 @@
+<% if @artworks.any? %>
+<table class="table table-striped artworks-table">
+  <thead>
+    <th>Title</th>
+    <th>Sold</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @artworks.each do |artwork| %>
+    <tr>
+      <td>
+        <%= link_to artwork.title, edit_admin_artwork_path(artwork) %>
+      </td>
+      <td>
+        <%= artwork.sold %>
+      </td>
+      <td>
+        <% if artwork.image? %>
+        <%= image_tag artwork.image.url(:thumb) %></td>
+        <% end %>
+      <td>
+        <%= link_to("Edit", edit_admin_artwork_path(artwork), class: "btn btn-primary") %>
+      </td>
+      <td>
+        <%= link_to("Delete", admin_artwork_path(artwork),
+            method: :delete,
+            "data-confirm" => "Are you sure?",
+            class: "btn btn-danger") %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<p>
+  No Artworks yet. <%= link_to("Create One", new_admin_artwork_path) %>
+</p>
+<% end %>

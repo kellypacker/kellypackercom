@@ -1,6 +1,16 @@
 class Artwork < ActiveRecord::Base
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   belongs_to :art_group
+
+  has_attached_file :image,
+    :styles => {
+      :large => "1200x1200>",
+      :medium => "600x600>",
+      :thumb => "300x300>"
+    }
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+  before_validation :generate_slug
+
   MEDIUMS = [
     "Oil pastel on matboard/wood panel",
     "Oil pastel and color pencil on paper",
@@ -17,8 +27,23 @@ class Artwork < ActiveRecord::Base
     "Acrylic on wood panel",
     "Acrylic on paper"
   ]
-  currentYear = Time.new.year
-  YEARS = Array (2003..currentYear)
-  YEARS.sort! {|x,y| y <=> x }
+
+  def to_param
+    slug
+  end
+
+  def self.find(input)
+    input.to_i == 0 ? find_by_slug(input) : super
+  end
+
+  def generate_slug
+    if self.slug.present?
+      generate_slug!
+    end
+  end
+
+  def generate_slug!
+    self.slug = title.parameterize
+  end
 
 end

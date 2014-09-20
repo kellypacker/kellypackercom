@@ -1,0 +1,30 @@
+<%= simple_form_for(
+  @artwork,
+  url: @artwork.new_record? ? admin_artworks_path : admin_artwork_path(@artwork),
+  method: @artwork.new_record? ? :post : :put,
+) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :slug %>
+    <%= f.input :available %>
+    <%= f.input :sold %>
+    <div class="row">
+      <div class="col-xs-2">
+        <%= f.input :height %>
+      </div>
+      <div class="col-xs-3">
+        <%= f.input :width %>
+      </div>
+      <div class="col-xs-3">
+        <%= f.input :year, collection: years_artwork_created, as: :select %>
+      </div>
+    </div>
+    <%= f.input :art_group_id, collection: ArtGroup.all, as: :select %>
+    <%= f.input :price %>
+    <%# f.input :medium, collection: MEDIUMS, as: :select %>
+    <%= f.input :image %>
+  </div>
+  <%= link_to("Cancel", admin_artworks_path, class: "btn btn-danger") %>
+  <%= f.button :submit, class: "btn-primary pull-right" %>
+
+<% end %>

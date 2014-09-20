@@ -1,4 +1,5 @@
 class ArtGroupsController < ApplicationController
+
   def index
     @art_groups = ArtGroup.all
   end
@@ -9,12 +10,4 @@ class ArtGroupsController < ApplicationController
     @body_class = "portfolio"
     @works = Artwork.where(:art_group_id => @group_id)
   end
-
-  private
-  def art_group_params
-    params.require(:art_group).permit(
-      :description, :title, :image, :slug
-    )
-  end
-
 end
