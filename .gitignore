@@ -16,4 +16,6 @@
 /log/*.log
 /tmp
 
+/public/system/
+
 .env
