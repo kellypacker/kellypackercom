@@ -1,5 +1,6 @@
 class Artwork < ActiveRecord::Base
   belongs_to :art_group
+  belongs_to :medium
 
   has_attached_file :image,
     :styles => {
@@ -10,23 +11,6 @@ class Artwork < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   before_validation :generate_slug
-
-  MEDIUMS = [
-    "Oil pastel on matboard/wood panel",
-    "Oil pastel and color pencil on paper",
-    "Mixed media on paper",
-    "Mixed media on matboard",
-    "Mixed media on wood panel",
-    "Wood block print",
-    "Video installation",
-    "Mural",
-    "Gouche, oil pastel on paper",
-    "Acrylic",
-    "Acrylic on canvas",
-    "Acrylic on matboard",
-    "Acrylic on wood panel",
-    "Acrylic on paper"
-  ]
 
   def to_param
     slug

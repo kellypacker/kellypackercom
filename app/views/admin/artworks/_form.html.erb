@@ -19,7 +19,7 @@
       </div>
     </div>
     <%= f.input :art_group_id, collection: ArtGroup.all, as: :select %>
-    <%# f.input :medium, collection: MEDIUMS, as: :select %>
+    <%= f.input :medium_id, collection: Medium.all, as: :select %>
     <%= f.input :image %>
     <%= f.input :notes, :input_html => { :rows => 10 }, :hint => "Markdown" %>
     <h2>Sales</h2>
