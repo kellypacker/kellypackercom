@@ -30,7 +30,7 @@ module Admin
 
     def update
       if @art_group.update_attributes(art_group_params)
-        redirect_to admin_art_groups_path, notice: "Art group updated"
+        redirect_to admin_art_groups_path, notice: 'Art group was successfully updated.'
       else
         render 'edit'
       end
@@ -44,7 +44,7 @@ module Admin
     private
     def art_group_params
       params.require(:art_group).permit(
-        :title, :description, :image
+        :title, :description, :image, :slug
       )
     end
 

@@ -72,11 +72,13 @@ Kellypacker::Application.configure do
 
   # Amazon S3 settings for Paperclip uploads
   config.paperclip_defaults = {
+    # url: ':s3_domain_url',
+    # path: '/:class/:attachment/:id_partition/:style/:filename',
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['KELLY_AWS_BUCKET'],
-      :access_key_id => ENV['KELLY_AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['KELLY_AWS_SECRET_ACCESS_KEY']
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 

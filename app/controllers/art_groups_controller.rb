@@ -12,7 +12,7 @@ class ArtGroupsController < ApplicationController
 
   private
   def art_group_params
-    params.require(:contact_note).permit(
+    params.require(:art_group).permit(
       :description, :title, :image, :slug
     )
   end

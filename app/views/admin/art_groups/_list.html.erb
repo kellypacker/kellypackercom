@@ -17,7 +17,10 @@
       <td>
         <%= art_group.description %>
       </td>
-      <td><%= art_group.image %></td>
+      <td>
+        <% if art_group.image? %>
+        <%= image_tag art_group.image.url(:thumb) %></td>
+        <% end %>
       <td>
         <%= link_to("Edit", edit_admin_art_group_path(art_group), class: "btn btn-primary") %>
       </td>
