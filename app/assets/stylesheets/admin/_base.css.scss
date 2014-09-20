@@ -8,3 +8,9 @@
     @extend .active;
   }
 }
+.media {
+  margin-top: 0;
+  .nav-media {
+    @extend .active;
+  }
+}

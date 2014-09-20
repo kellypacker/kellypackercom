@@ -1,0 +1,12 @@
+<%= simple_form_for(
+  @medium,
+  url: @medium.new_record? ? admin_media_path : admin_medium_path(@medium),
+  method: @medium.new_record? ? :post : :put,
+) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+  </div>
+  <%= link_to("Cancel", admin_media_path, class: "btn btn-danger") %>
+  <%= f.button :submit, class: "btn-primary pull-right" %>
+
+<% end %>

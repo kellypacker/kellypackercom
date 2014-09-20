@@ -16,6 +16,7 @@ Kellypacker::Application.routes.draw do
     get "/" => "admin#dashboard", :as => "dashboard"
     resources :art_groups
     resources :artworks
+    resources :media
   end
 
  end
