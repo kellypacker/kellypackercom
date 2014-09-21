@@ -1,13 +1,3 @@
 == Kelly on Rails
 
 Personal website for kellypacker.com
-
-Local env
-passenger start
-kelly.dev
-
-postgres
-start postgres
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-
-

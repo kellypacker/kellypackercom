@@ -4,7 +4,6 @@
     <th>Name</th>
     <th></th>
     <th></th>
-    <th></th>
   </thead>
   <tbody>
     <% @media.each do |medium| %>
@@ -16,10 +15,10 @@
         <%= link_to("Edit", edit_admin_medium_path(medium), class: "btn btn-primary") %>
       </td>
       <td>
-        <%= link_to("Delete", admin_medium_path(medium),
-            method: :delete,
+        <%= button_to "Delete", admin_medium_path(medium),
+            :method => :delete,
             "data-confirm" => "Are you sure?",
-            class: "btn btn-danger") %>
+            class: "btn btn-danger" %>
       </td>
     </tr>
     <% end %>

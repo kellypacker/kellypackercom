@@ -5,9 +5,8 @@ class ArtGroupsController < ApplicationController
   end
 
   def show
-    @group = ArtGroup.find(params[:title])
-    @group_id = @group.id
     @body_class = "portfolio"
-    @works = Artwork.where(:art_group_id => @group_id)
+    @art_group = ArtGroup.find(params[:id])
+    @artworks = @art_group.artworks
   end
 end

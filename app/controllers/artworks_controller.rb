@@ -1,5 +1,6 @@
 class ArtworksController < ApplicationController
-  def detail
-  end
 
+  def show
+    @artwork = Artwork.find(params[:id])
+  end
 end

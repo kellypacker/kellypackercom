@@ -5,7 +5,7 @@ module Admin
     layout 'admin'
 
     def index
-      @media = Medium.all
+      @media = Medium.all.order("name ASC")
     end
 
     def new

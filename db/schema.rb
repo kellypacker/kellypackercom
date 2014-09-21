@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920232825) do
+ActiveRecord::Schema.define(version: 20140921175253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 20140920232825) do
     t.decimal  "sales_tax_paid",      precision: 8, scale: 2
     t.date     "sales_tax_paid_date"
     t.integer  "medium_id"
+    t.text     "description"
+    t.string   "store_link"
   end
 
   create_table "media", force: true do |t|

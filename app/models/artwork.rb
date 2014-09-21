@@ -5,7 +5,7 @@ class Artwork < ActiveRecord::Base
   has_attached_file :image,
     :styles => {
       :large => "1200x1200>",
-      :medium => "600x600>",
+      :medium => "800x800#",
       :thumb => "300x300>"
     }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]

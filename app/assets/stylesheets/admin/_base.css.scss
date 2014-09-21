@@ -10,6 +10,7 @@
 }
 .media {
   margin-top: 0;
+  overflow: auto;
   .nav-media {
     @extend .active;
   }

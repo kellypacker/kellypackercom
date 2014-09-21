@@ -1,12 +1,11 @@
 Kellypacker::Application.routes.draw do
 
-  get "/artwork" => "art_groups#index", :as => "artwork"
-  get "/artwork/:title" => "art_groups#show", :as => "art_group"
-  resources :artworks
-
   get "home/index"
-
   root :to => "home#index"
+
+  get "/artwork" => "art_groups#index", :as => "art_groups"
+  get "/artwork/series/:id" => "art_groups#show", :as => "art_group"
+  get "/artwork/:id" => "artworks#show", :as => "artwork"
 
   get "/contact" => "pages#contact"
   get "/profile" => "pages#profile"
