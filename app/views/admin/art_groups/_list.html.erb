@@ -25,10 +25,10 @@
         <%= link_to("Edit", edit_admin_art_group_path(art_group), class: "btn btn-primary") %>
       </td>
       <td>
-        <%= link_to("Delete", admin_art_group_path(art_group),
-            method: :delete,
+        <%= button_to "Delete", admin_art_group_path(art_group),
+            :method => :delete,
             "data-confirm" => "Are you sure?",
-            class: "btn btn-danger") %>
+            class: "btn btn-danger" %>
       </td>
     </tr>
     <% end %>

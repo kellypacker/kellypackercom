@@ -1,0 +1,23 @@
+.artwork-by-group {
+  .link-to-artwork {
+    display: block;
+    margin-bottom: 20px;
+    img.artwork-thumb {
+      transition: opacity .3s ease-out;
+      width: 100%;
+    }
+    .artwork-thumb:hover {
+      opacity: 0.8;
+    }
+    .artwork-title {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
+
+.art_group_show {
+  .page-header {
+    text-transform: none;
+  }
+}

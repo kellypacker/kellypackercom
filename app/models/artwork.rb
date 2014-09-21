@@ -6,7 +6,11 @@ class Artwork < ActiveRecord::Base
     :styles => {
       :large => "1200x1200>",
       :medium => "800x800#",
-      :thumb => "300x300>"
+      :thumb => "300x300#"
+    },
+    :convert_options => {
+      :medium => "-quality 80 -strip",
+      :thumb => "-quality 80 -strip"
     }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 

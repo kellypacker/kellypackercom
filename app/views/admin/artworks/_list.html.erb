@@ -25,10 +25,10 @@
         <%= link_to("Edit", edit_admin_artwork_path(artwork), class: "btn btn-primary") %>
       </td>
       <td>
-        <%= link_to("Delete", admin_artwork_path(artwork),
-            method: :delete,
+        <%= button_to "Delete", admin_artwork_path(artwork),
+            :method => :delete,
             "data-confirm" => "Are you sure?",
-            class: "btn btn-danger") %>
+            class: "btn btn-danger" %>
       </td>
     </tr>
     <% end %>

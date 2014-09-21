@@ -1,2 +1,29 @@
-<h1>Artworks#detail</h1>
-<p>Find me in app/views/artworks/detail.html.erb</p>
+<div class="row artwork-wrap">
+  <div class="col-md-8">
+    <%= image_tag @artwork.image.url(:large), :alt => @artwork.title, :class => "artwork-large" %>
+  </div>
+  <div class="col-md-4">
+    <ul class="list-unstyled artwork-details">
+      <li><h1 class="artwork-title"><%= @artwork.title %></h1></li>
+      <% if @artwork.long_title %>
+      <li><%= markdown(@artwork.long_title) %></li>
+      <% end %>
+      <li><%= @artwork.height %>" x <%= @artwork.width %>"</li>
+      <li><%= @artwork.medium.name %></li>
+      <li><%= @artwork.year %></li>
+      <% if @artwork.available %>
+        <li class="spacer"><%= number_to_currency(@artwork.price) %></li>
+        <% if @artwork.store_link? %>
+        <%= link_to "Available for purchase online »", @artwork.store_link %>
+        <% else %>
+        <li><a href="mailto:kelly@kellypacker.com?subject=<%= u("Artwork inquiry: #{@artwork.title}") %>&body=<%= u(@artwork.title + "\n" + request.original_url) %>">
+          <i class="fa fa-envelope"></i>
+          Inquire about artwork</a></li>
+
+        <% end %>
+      <% end %>
+
+    </ul>
+
+  </div>
+</div>
