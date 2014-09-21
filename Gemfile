@@ -19,6 +19,7 @@ gem 'aws-sdk'
 gem 'formtastic'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'clearance'
+gem 'redcarpet'
 # gem "meta_search",    '>= 1.1.0.pre'
 
 group :development do

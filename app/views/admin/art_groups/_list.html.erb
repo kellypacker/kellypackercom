@@ -15,7 +15,7 @@
         <%= link_to art_group.title, edit_admin_art_group_path(art_group) %>
       </td>
       <td>
-        <%= art_group.description %>
+        <%= markdown(art_group.description) %>
       </td>
       <td>
         <% if art_group.image? %>
