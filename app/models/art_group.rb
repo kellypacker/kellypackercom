@@ -1,6 +1,7 @@
 class ArtGroup < ActiveRecord::Base
   has_attached_file :image,
     :styles => {
+      :large => "800x800#",
       :medium => "600x600#",
       :thumb => "300x300#"
     },

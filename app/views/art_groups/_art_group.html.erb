@@ -1,9 +1,15 @@
-<div class="art_work_series_entry group">
-  <%= image_tag group.image.url, :alt => group.title, :class => "original", :width => 105, :height => 105 %>
-  <div class="series-info">
-    <h2>
-      <%= link_to group.title, art_group_path(group) %>
-    </h2>
-    <%= group.description %>
+<div class="row">
+  <div class="one-art-group clearfix">
+    <div class="col-md-4 col-sm-4">
+      <%= image_tag group.image.url, :alt => group.title, :class => "original", :width => 105, :height => 105 %>
+    </div>
+    <div class="col-md-8 col-sm-8">
+      <div class="art-group-info">
+        <h2>
+          <%= link_to group.title, art_group_path(group) %>
+        </h2>
+        <%= markdown(group.description) %>
+      </div>
+    </div>
   </div>
 </div>

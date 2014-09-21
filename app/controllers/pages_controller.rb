@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def contact
+    @body_class="contact"
     @page_title = "Contact Kelly Packer Artist & Web Developer in Boise, Idaho"
     @page_desc = "Contact Kelly Packer regarding general inquires, web development project and artwork commissions."
   end
@@ -11,6 +12,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @body_class="profile"
     @page_title = "Kelly Packer is an Artist & Web Developer in Boise, Idaho"
     @page_desc = "Profile of Kelly Packer, artist and web developer in Boise, Idaho. Includes influences, articles and artist statement."
   end

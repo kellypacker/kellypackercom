@@ -28,3 +28,24 @@
     }
   }
 }
+
+.art_groups {
+  .nav-artwork {
+    @extend .active;
+  }
+}
+.web-development {
+  .nav-web-development {
+    @extend .active;
+  }
+}
+.profile {
+  .nav-profile {
+    @extend .active;
+  }
+}
+.contact {
+  .nav-contact {
+    @extend .active;
+  }
+}

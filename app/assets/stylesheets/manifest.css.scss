@@ -3,6 +3,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+@import 'utils/media_queries';
 @import 'elements/header';
 @import 'elements/footer';
 
@@ -10,3 +11,4 @@
 
 @import 'views/home';
 @import 'views/pages';
+@import 'views/art_groups';

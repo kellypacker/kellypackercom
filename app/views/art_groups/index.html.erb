@@ -1,12 +1,9 @@
-<div class="group container content">
-  <div class="eleven columns">
-    <h1>Art Work <em>by</em> Series</h1>
-    <div class="portfolio_art_work">
-      <% @art_groups.each do |group| %>
-        <%= render :partial => "art_groups/art_group", :locals => { group: group } %>
-      <% end %>
-    </div>
-  </div><!--/eleven_unit-->
-  <div class="five columns sidebar">
-  </div><!--/five_unit-->
+<h1 class="page-header">Art Work <em>by</em> Series</h1>
+<div class="row">
+  <div class="col-sm-12 col-md-10 art-group-list">
+
+    <% @art_groups.each do |group| %>
+      <%= render :partial => "art_groups/art_group", :locals => { group: group } %>
+    <% end %>
+  </div>
 </div>
