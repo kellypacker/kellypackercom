@@ -24,6 +24,7 @@ gem 'draper', '~> 1.3'
 # order
 gem 'ranked-model'
 # gem "meta_search",    '>= 1.1.0.pre'
+gem 'sitemap_generator'
 
 group :development do
   gem 'foreman'
