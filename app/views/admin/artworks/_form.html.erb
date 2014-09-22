@@ -20,7 +20,7 @@
       </div>
     </div>
     <%= f.input :art_group_id, collection: ArtGroup.all, as: :select %>
-    <%= f.input :medium_id, collection: Medium.all, as: :select %>
+    <%= f.input :medium_id, collection: Medium.all.order("name ASC"), as: :select %>
     <%= f.input :image %>
     <%= f.input :notes, :input_html => { :rows => 10 }, :hint => "Private, Markdown" %>
     <h2>Sales</h2>

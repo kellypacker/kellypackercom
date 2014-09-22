@@ -13,8 +13,12 @@ Kellypacker::Application.routes.draw do
 
   namespace :admin do
     get "/" => "admin#dashboard", :as => "dashboard"
-    resources :art_groups
-    resources :artworks
+    resources :art_groups do
+      post :update_row_order, on: :collection
+    end
+    resources :artworks do
+      post :update_row_order, on: :collection
+    end
     resources :media
   end
 

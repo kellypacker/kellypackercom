@@ -1,21 +1,21 @@
 <% if @art_groups.any? %>
-<table class="table table-striped art_groups-table">
+<table class="table table-striped art_groups-table sortable">
   <thead>
     <th>Title</th>
-    <th>Description</th>
     <th>Image</th>
-    <th></th>
     <th></th>
     <th></th>
   </thead>
   <tbody>
     <% @art_groups.each do |art_group| %>
-    <tr>
+    <tr
+      data-model="art_group"
+      data-controller-url="/admin/art_groups/"
+      data-item-id=<%= "#{art_group.id}" %>
+      class="sortable-row"
+    >
       <td>
         <%= link_to art_group.title, edit_admin_art_group_path(art_group) %>
-      </td>
-      <td>
-        <%= markdown(art_group.description) %>
       </td>
       <td>
         <% if art_group.image? %>

@@ -2,11 +2,14 @@ class Artwork < ActiveRecord::Base
   belongs_to :art_group
   belongs_to :medium
 
+  include RankedModel
+  ranks :row_order
+
   has_attached_file :image,
     :styles => {
       :large => "1200x1200>",
       :medium => "800x800#",
-      :thumb => "300x300#"
+      :thumb => "75x75#"
     },
     :convert_options => {
       :medium => "-quality 80 -strip",
@@ -33,5 +36,4 @@ class Artwork < ActiveRecord::Base
   def generate_slug!
     self.slug = title.parameterize
   end
-
 end

@@ -1,4 +1,7 @@
 class ArtGroup < ActiveRecord::Base
+  include RankedModel
+  ranks :row_order
+
   has_attached_file :image,
     :styles => {
       :large => "800x800#",

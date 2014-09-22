@@ -1,16 +1,20 @@
 <% if @artworks.any? %>
-<table class="table table-striped artworks-table">
+<table class="table table-striped artworks-table sortable">
   <thead>
     <th>Title</th>
     <th>Sold</th>
     <th>Image</th>
     <th></th>
     <th></th>
-    <th></th>
   </thead>
   <tbody>
     <% @artworks.each do |artwork| %>
-    <tr>
+    <tr
+      data-model="artwork"
+      data-controller-url="/admin/artworks/"
+      data-item-id=<%= "#{artwork.id}" %>
+      class="sortable-row"
+    >
       <td>
         <%= link_to artwork.title, edit_admin_artwork_path(artwork) %>
       </td>

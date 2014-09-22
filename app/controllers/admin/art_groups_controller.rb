@@ -1,11 +1,11 @@
 module Admin
   class ArtGroupsController < ApplicationController
     before_filter :authorize
-    before_filter :load_art_group, :except => ["index", "new", "create"]
+    before_filter :load_art_group, :except => ["index", "new", "create", "update_row_order"]
     layout 'admin'
 
     def index
-      @art_groups = ArtGroup.all
+      @art_groups = ArtGroup.rank(:row_order).all
     end
 
     def new
@@ -41,10 +41,18 @@ module Admin
       redirect_to admin_art_groups_path
     end
 
+    def update_row_order
+      @art_group = ArtGroup.find(art_group_params[:art_group_id])
+      @art_group.row_order_position = art_group_params[:row_order_position]
+      @art_group.save
+      render nothing: true
+    end
+
     private
     def art_group_params
       params.require(:art_group).permit(
-        :title, :description, :image, :slug
+        :title, :description, :image, :slug, :row_order, :row_order_position,
+        :art_group_id
       )
     end
 

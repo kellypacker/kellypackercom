@@ -21,6 +21,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'clearance'
 gem 'redcarpet'
 gem 'draper', '~> 1.3'
+# order
+gem 'ranked-model'
 # gem "meta_search",    '>= 1.1.0.pre'
 
 group :development do

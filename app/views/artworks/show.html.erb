@@ -1,3 +1,21 @@
+<div class="row">
+  <div class="col-md-2">
+    <%= link_to "#", {:class => "pull-left artwork-nav"} do %>
+    <i class="fa fa-angle-left"></i> Prev
+    <% end %>
+  </div>
+
+  <div class="col-md-8">
+    <%= link_to art_group_path(@artwork.art_group), {:class => "text-center artwork-nav"} do %>
+     - All Artworks in Series -
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "#", {:class => "pull-right artwork-nav"} do %>
+    Next <i class="fa fa-angle-right"></i>
+    <% end %>
+  </div>
+</div>
 <div class="row artwork-wrap">
   <div class="col-md-8">
     <%= image_tag @artwork.image.url(:large), :alt => @artwork.title, :class => "artwork-large" %>
