@@ -52,7 +52,7 @@ module Admin
     def art_group_params
       params.require(:art_group).permit(
         :title, :description, :image, :slug, :row_order, :row_order_position,
-        :art_group_id
+        :art_group_id, :artist_statement
       )
     end
 

@@ -10,7 +10,12 @@
         <h2>
           <%= link_to group.title, art_group_path(group) %>
         </h2>
+
         <%= markdown(group.description) %>
+        <% if group.artist_statement? %>
+        <h4>Statement</h4>
+        <%= markdown(group.artist_statement) %>
+        <% end %>
       </div>
     </div>
   </div>
