@@ -1,7 +1,9 @@
 <div class="row">
   <div class="one-art-group clearfix">
     <div class="col-md-4 col-sm-4">
+      <%= link_to art_group_path(group) do %>
       <%= image_tag group.image.url, :alt => group.title, :class => "original", :width => 105, :height => 105 %>
+      <% end %>
     </div>
     <div class="col-md-8 col-sm-8">
       <div class="art-group-info">

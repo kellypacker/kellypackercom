@@ -1,4 +1,24 @@
-<h1 class="page-header"><%= @art_group.title %></h1>
+<div class="row">
+  <div class="col-md-6">
+    <% if @art_group.prev.present? %>
+      <%= link_to art_group_path(@art_group.prev), {:class => "pull-left art-group-nav"} do %>
+      <i class="fa fa-angle-left"></i> Prev Series
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <% if @art_group.next.present? %>
+    <%= link_to art_group_path(@art_group.next), {:class => "pull-right art-group-nav"} do %>
+    Next Series <i class="fa fa-angle-right"></i>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-9">
+    <h1 class="page-header"><%= @art_group.title %></h1>
+  </div>
+</div>
 <div class="row artwork-by-group">
   <% @artworks.each do |artwork| %>
     <div class="col-md-4 col-sm-4">

@@ -34,4 +34,12 @@ class ArtGroup < ActiveRecord::Base
   def generate_slug!
     self.slug = title.parameterize
   end
+
+  def next
+    ArtGroup.where("row_order > ?", self.row_order).first
+  end
+
+  def prev
+    ArtGroup.where("row_order < ?", self.row_order).last
+  end
 end
