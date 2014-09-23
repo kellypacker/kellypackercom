@@ -13,10 +13,6 @@ module Admin
     end
 
     def show
-
-    end
-
-    def edit
     end
 
     def create
@@ -26,6 +22,9 @@ module Admin
       else
         render 'new'
       end
+    end
+
+    def edit
     end
 
     def update
