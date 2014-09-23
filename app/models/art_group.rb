@@ -5,8 +5,8 @@ class ArtGroup < ActiveRecord::Base
   has_attached_file :image,
     :styles => {
       :large => "800x800#",
-      :medium => "600x600#",
-      :thumb => "300x300#"
+      :list => "600x600#",
+      :thumb => "75x75#"
     },
     :convert_options => {
       :thumb => "-quality 80 -strip"
