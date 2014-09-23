@@ -1,6 +1,6 @@
 module Admin
   class ArtworksController < ApplicationController
-    # before_filter :authorize
+    before_filter :authorize
     before_filter :load_artwork, :except => ['index', 'new', 'create', 'update_row_order']
     layout 'admin'
 

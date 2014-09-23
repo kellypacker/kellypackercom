@@ -5,5 +5,5 @@ Personal website for kellypacker.com
 **Regenerate images**
 
 ```
-rake paperclip:refresh:thumbnails CLASS=User
+rake paperclip:refresh:thumbnails CLASS=Artwork
 ```
