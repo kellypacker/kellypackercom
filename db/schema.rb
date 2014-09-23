@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922042641) do
+ActiveRecord::Schema.define(version: 20140923053010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140922042641) do
     t.integer  "width"
     t.integer  "height"
     t.integer  "year"
-    t.integer  "art_group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140922042641) do
     t.text     "description"
     t.string   "store_link"
     t.integer  "row_order",                                   default: 0, null: false
+    t.integer  "art_group_id"
   end
 
   create_table "media", force: true do |t|

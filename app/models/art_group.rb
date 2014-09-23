@@ -1,4 +1,6 @@
 class ArtGroup < ActiveRecord::Base
+  has_many :artworks
+
   include RankedModel
   ranks :row_order
 
@@ -12,8 +14,6 @@ class ArtGroup < ActiveRecord::Base
       :thumb => "-quality 80 -strip"
     }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-
-  has_many :artworks
 
   before_validation :generate_slug
 
