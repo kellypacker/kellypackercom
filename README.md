@@ -1,4 +1,4 @@
-== Kelly on Rails
+# Kelly on Rails #
 
 Personal website for kellypacker.com
 
