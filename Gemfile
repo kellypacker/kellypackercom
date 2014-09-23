@@ -17,7 +17,6 @@ gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
 gem 'jquery-rails'
 gem 'aws-sdk'
 gem 'formtastic'
-gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'clearance'
 gem 'redcarpet'
 gem 'draper', '~> 1.3'
