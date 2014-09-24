@@ -1,7 +1,7 @@
 module Admin
   class ArtworksController < ApplicationController
     before_filter :authorize
-    before_filter :load_art_group, :except => ["index", "new", "create", "update_row_order"]
+    before_filter :load_artwork, :except => ["index", "new", "create", "update_row_order"]
     layout 'admin'
 
     def index
@@ -54,7 +54,7 @@ module Admin
         :year, :image, :price, :art_group_id, :slug, :long_title, :notes,
         :sold_to, :sale_date, :sale_location, :sale_notes, :sale_price,
         :sales_tax_paid, :sales_tax_paid_date, :description, :store_link, :row_order,
-        :row_order_position, :artwork_id
+        :row_order_position, :artwork_id, :framed, :prints_available
       )
     end
 

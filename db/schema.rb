@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923053010) do
+ActiveRecord::Schema.define(version: 20140924032034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20140923053010) do
     t.string   "store_link"
     t.integer  "row_order",                                   default: 0, null: false
     t.integer  "art_group_id"
+    t.boolean  "prints_available"
+    t.boolean  "framed"
   end
 
   create_table "media", force: true do |t|
