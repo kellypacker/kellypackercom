@@ -1,20 +1,20 @@
 <div class="row">
   <div class="one-art-group clearfix">
     <div class="col-md-4 col-sm-4">
-      <%= link_to art_group_path(group) do %>
-      <%= image_tag group.image.url(:list), :alt => group.title %>
+      <%= link_to art_group_path(art_group) do %>
+      <%= image_tag art_group.image.url(:list), :alt => art_group.title %>
       <% end %>
     </div>
     <div class="col-md-8 col-sm-8">
       <div class="art-group-info">
         <h2>
-          <%= link_to group.title, art_group_path(group) %>
+          <%= link_to art_group.title, art_group_path(art_group) %>
         </h2>
 
-        <%= markdown(group.description) %>
-        <% if group.artist_statement? %>
+        <%= markdown(art_group.description) %>
+        <% if art_group.artist_statement? %>
         <h4>Statement</h4>
-        <%= markdown(group.artist_statement) %>
+        <%= markdown(art_group.artist_statement) %>
         <% end %>
       </div>
     </div>

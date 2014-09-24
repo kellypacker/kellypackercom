@@ -19,13 +19,16 @@
     <h1 class="page-header"><%= @art_group.title %></h1>
   </div>
 </div>
-<div class="row artwork-by-group">
-  <% @artworks.each do |artwork| %>
-    <div class="col-md-4 col-sm-4">
-      <%= link_to artwork_path(artwork), {class: "link-to-artwork"} do %>
-        <%= image_tag artwork.image.url(:medium), :alt => artwork.title, :class => "artwork-thumb" %>
-        <h6 class="artwork-title"><%= artwork.title %></h6>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+<% @artworks.in_groups_of(3, false).each do |group| %>
+  <div class="row artwork-by-group">
+
+    <% group.each do |artwork| %>
+      <div class="col-md-4 col-sm-4">
+        <%= link_to artwork_path(artwork), {class: "link-to-artwork"} do %>
+          <%= image_tag artwork.image.url(:medium), :alt => artwork.title, :class => "artwork-thumb" %>
+          <h6 class="artwork-title"><%= artwork.title %></h6>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
