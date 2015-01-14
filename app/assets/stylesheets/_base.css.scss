@@ -16,6 +16,12 @@ img.pull-left {
   margin-bottom: 15px;
 }
 
+.double-underline {
+  border-bottom: double $gray-light;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
 
 .page-header {
   text-transform: uppercase;
