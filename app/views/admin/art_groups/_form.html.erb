@@ -8,7 +8,7 @@
     <%= f.input :slug %>
     <%= f.input :description, :input_html => { :rows => 10 }, :hint => "Markdown" %>
     <%= f.input :artist_statement, :input_html => { :rows => 10 }, :hint => "Markdown" %>
-    <%= f.input :image %>
+    <%= f.input :image, :hint => "600x600" %>
   </div>
   <%= link_to("Cancel", admin_art_groups_path, class: "btn btn-danger") %>
   <%= f.button :submit, class: "btn-primary pull-right" %>
