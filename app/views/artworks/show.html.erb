@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-2">
+  <div class="col-md-2 col-sm-2 col-xs-3">
     <% if @artwork.prev.present? %>
       <%= link_to artwork_path(@artwork.prev), {:class => "pull-left artwork-nav"} do %>
       <i class="fa fa-angle-left"></i> Prev
@@ -7,12 +7,12 @@
     <% end %>
   </div>
 
-  <div class="col-md-8">
+  <div class="col-md-8 col-sm-8 col-xs-6">
     <%= link_to art_group_path(@artwork.art_group), {:class => "text-center artwork-nav"} do %>
      - All Artworks in Series -
     <% end %>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-2 col-sm-2 col-xs-3">
     <% if @artwork.next.present? %>
       <%= link_to artwork_path(@artwork.next), {:class => "pull-right artwork-nav"} do %>
       Next <i class="fa fa-angle-right"></i>
