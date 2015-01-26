@@ -5,7 +5,19 @@ module Admin
     layout 'admin'
 
     def index
+      # raise params.to_yaml
       @artworks = Artwork.rank(:row_order).all
+      apply_filters
+    end
+
+    def apply_filters
+      apply_art_group_filter
+    end
+
+    def apply_art_group_filter
+      if params[:filters] && params[:filters][:art_group].present?
+        @artworks = @artworks.where(art_group_id: params[:filters][:art_group])
+      end
     end
 
     def new
@@ -29,7 +41,7 @@ module Admin
 
     def update
       if @artwork.update_attributes(artwork_params)
-        redirect_to admin_artworks_path, notice: "Artwork saved"
+        redirect_to admin_artworks_path(filters: {"art_group" => @artwork.art_group_id}), notice: "Artwork saved"
       else
         render 'edit'
       end

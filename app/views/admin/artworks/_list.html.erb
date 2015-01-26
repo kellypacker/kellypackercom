@@ -1,9 +1,33 @@
 <% if @artworks.any? %>
+<div class="filter-wrap row">
+  <div class="col-md-12">
+    <%= simple_form_for(
+      :filters,
+      url: admin_artworks_path(page: 0),
+      method: :get,
+      html: { class: "form-inline artwork-filters-form" }
+    ) do |f| %>
+
+    <%= f.input_field(
+      :art_group,
+      collection: ArtGroup.all,
+      selected: selected_art_group,
+      class: "form-control",
+      include_blank: true,
+      prompt: "Select a series"
+    )%>
+
+    <%= link_to("Clear", admin_artworks_path, class: "btn btn-default") %>
+
+    <% end %>
+  </div>
+</div>
 <table class="table table-striped artworks-table sortable">
   <thead>
     <th>Title</th>
     <th>Sold</th>
     <th>Image</th>
+    <th>Group</th>
     <th></th>
     <th></th>
   </thead>
@@ -23,8 +47,12 @@
       </td>
       <td>
         <% if artwork.image? %>
-        <%= image_tag artwork.image.url(:thumb) %></td>
+        <%= image_tag artwork.image.url(:thumb) %>
         <% end %>
+      </td>
+      <td>
+        <%= artwork.art_group.title %>
+      </td>
       <td>
         <%= link_to("Edit", edit_admin_artwork_path(artwork), class: "btn btn-primary") %>
       </td>

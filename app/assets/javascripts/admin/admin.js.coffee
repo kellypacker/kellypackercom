@@ -41,3 +41,6 @@ jQuery ->
           console.log test
         )
     )
+
+  $("form.artwork-filters-form select").change () ->
+    $(@).parents("form").submit()
