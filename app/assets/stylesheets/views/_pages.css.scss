@@ -39,7 +39,7 @@
     text-transform: uppercase;
     border-bottom: 1px solid $gray-light;
     padding-bottom: 7px;
-    margin-top: 70px;
+    margin-top: 30px;
   }
   .web-skills-list {
     h3 {
@@ -56,5 +56,11 @@
       font-size: 14px;
     }
 
+  }
+}
+
+.profile {
+  #influences {
+    margin-top: 30px;
   }
 }
