@@ -1,8 +1,8 @@
 <h1 class="page-header">Artwork <em>by</em> Series</h1>
 <div class="row">
   <div class="col-sm-12 col-md-10 art-group-list">
-    <% @art_groups.each do |group| %>
-      <%= render :partial => "art_groups/art_group", :locals => { group: group } %>
+    <% @art_groups.each do |art_group| %>
+      <%= render :partial => "art_groups/art_group", :locals => { art_group: art_group } %>
     <% end %>
   </div>
 </div>
