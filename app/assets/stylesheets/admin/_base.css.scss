@@ -2,6 +2,11 @@
   .nav-art-groups {
     @extend .active;
   }
+  .container {
+    form {
+      margin-bottom: 40px;
+    }
+  }
 }
 .artworks {
   .nav-artworks {
