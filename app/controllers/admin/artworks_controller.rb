@@ -30,7 +30,7 @@ module Admin
     def create
       @artwork = Artwork.new(artwork_params)
       if @artwork.save
-        redirect_to admin_artworks_path(@artwork), notice: "Artwork created"
+        redirect_to admin_artworks_path(@artwork, filters: {"art_group" => @artwork.art_group_id}), notice: "Artwork created"
       else
         render 'new'
       end
