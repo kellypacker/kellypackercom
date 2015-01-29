@@ -10,7 +10,7 @@
 
     <%= f.input_field(
       :art_group,
-      collection: ArtGroup.all,
+      collection: ArtGroup.rank(:row_order).all,
       selected: selected_art_group,
       class: "form-control",
       include_blank: true,
