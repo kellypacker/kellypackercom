@@ -25,6 +25,7 @@ gem 'draper', '~> 1.3'
 gem 'ranked-model'
 # gem "meta_search",    '>= 1.1.0.pre'
 gem 'sitemap_generator'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'foreman'
@@ -38,5 +39,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'newrelic_rpm'
 end
