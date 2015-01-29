@@ -38,10 +38,14 @@ class Artwork < ActiveRecord::Base
   end
 
   def next
-    Artwork.where("row_order > ?", self.row_order).rank(:row_order).first
+    Artwork
+      .where(art_group_id: self.art_group_id)
+      .where("row_order > ?", self.row_order).rank(:row_order).first
   end
 
   def prev
-    Artwork.where("row_order < ?", self.row_order).rank(:row_order).last
+    Artwork
+      .where(art_group_id: self.art_group_id)
+      .where("row_order < ?", self.row_order).rank(:row_order).last
   end
 end
