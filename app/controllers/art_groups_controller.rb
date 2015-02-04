@@ -10,7 +10,7 @@ class ArtGroupsController < ApplicationController
     @body_class = "art_group_show"
     @art_group = ArtGroup.find(params[:id])
     @artworks = @art_group.artworks.rank(:row_order).all
-    @page_title = @art_group.title
+    @page_title = "Series: #{@art_group.title}"
     @page_desc = "Kelly Packer: Artwork for the series: #{@art_group.title}."
   end
 end
