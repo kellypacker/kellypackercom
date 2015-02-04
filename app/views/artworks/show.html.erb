@@ -1,23 +1,26 @@
 <div class="row">
-  <div class="col-md-2 col-sm-2 col-xs-3">
-    <% if @artwork.prev.present? %>
-      <%= link_to artwork_path(@artwork.prev), {:class => "pull-left artwork-nav"} do %>
-      <i class="fa fa-angle-left"></i> Prev
-      <% end %>
-    <% end %>
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <h2 class="series-title"><span>Series:</span> <%= @artwork.art_group.title %></h2>
   </div>
 
-  <div class="col-md-8 col-sm-8 col-xs-6">
-    <%= link_to art_group_path(@artwork.art_group), {:class => "text-center artwork-nav"} do %>
-     - All Artworks in Series -
-    <% end %>
-  </div>
-  <div class="col-md-2 col-sm-2 col-xs-3">
-    <% if @artwork.next.present? %>
-      <%= link_to artwork_path(@artwork.next), {:class => "pull-right artwork-nav"} do %>
-      Next <i class="fa fa-angle-right"></i>
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="artwork-nav-wrap">
+      <% if @artwork.prev.present? %>
+        <%= link_to artwork_path(@artwork.prev), {:class => "artwork-nav"} do %>
+        <i class="fa fa-angle-left"></i> Prev
+        <% end %>
       <% end %>
-    <% end %>
+
+      <%= link_to art_group_path(@artwork.art_group), {:class => "text-center artwork-nav"} do %>
+       - All Artworks in Series -
+      <% end %>
+
+      <% if @artwork.next.present? %>
+        <%= link_to artwork_path(@artwork.next), {:class => "artwork-nav"} do %>
+        Next <i class="fa fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="row artwork-wrap">
