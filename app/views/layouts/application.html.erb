@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Kelly Packer<% if @page_title.present? %> | <%= @page_title %><% end %></title>
   <meta name="description" content="<%= @page_desc %>">
   <%= stylesheet_link_tag    "manifest", :media => "all" %>
   <script type="text/javascript" src="//use.typekit.net/wnf3clz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <%= javascript_include_tag "application" %>
+  <script src="/assets/modernizr-2.6.2.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= "#{controller.controller_name} #{@body_class}".strip %>">
-<div class="container">
-
-  <%= render 'header' %>
-  <div class="yield-wrap">
-    <%= yield %>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="container">
+    <%= render 'header' %>
+    <div class="yield-wrap">
+      <%= yield %>
+    </div>
+    <%= render 'footer' %>
   </div>
-  <%= render 'footer' %>
-</div>
-
-
-
+  <%= javascript_include_tag "application" %>
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
 </body>
 </html>
