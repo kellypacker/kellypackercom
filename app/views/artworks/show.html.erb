@@ -36,6 +36,11 @@
       <li><%= @artwork.height %>" x <%= @artwork.width %>"</li>
       <li><%= @artwork.medium.name %></li>
       <li><%= @artwork.year %></li>
+      <% if @artwork.prints_available %>
+      <li>
+        <a href="https://www.etsy.com/shop/kellypacker">Prints of this artwork are available »</a>
+      </li>
+      <% end %>
       <% if @artwork.available %>
         <li class="spacer"><%= number_to_currency(@artwork.price) %></li>
         <% if @artwork.store_link? %>
