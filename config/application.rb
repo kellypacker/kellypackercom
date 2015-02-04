@@ -61,5 +61,8 @@ module Kellypacker
 
     # added for activeadmin on heroku
     config.assets.initialize_on_precompile = false
+    
+    # cache for a year
+    config.static_cache_control = "public, max-age=31536000"
   end
 end
