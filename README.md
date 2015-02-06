@@ -1,4 +1,4 @@
-# Kelly on Rails #
+# Kelly on Rails
 
 Personal website for kellypacker.com
 
@@ -6,4 +6,14 @@ Personal website for kellypacker.com
 
 ```
 rake paperclip:refresh:thumbnails CLASS=Artwork
+```
+
+## Sitemap
+
+Sitemap Generator [https://github.com/kjvarga/sitemap_generator](https://github.com/kjvarga/sitemap_generator)
+Sitemap is in /public folder
+
+```
+rake sitemap:refresh:no_ping
+rake sitemap:refresh
 ```
