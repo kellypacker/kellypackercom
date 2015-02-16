@@ -2,7 +2,7 @@
   <div class="one-art-group clearfix">
     <div class="col-md-4 col-sm-4">
       <%= link_to art_group_path(art_group) do %>
-      <%= image_tag art_group.image.url(:list), :alt => art_group.title %>
+      <%= retina_image_tag(art_group, :image, :list, :default => [300, 300], :alt => art_group.title) %>
       <% end %>
     </div>
     <div class="col-md-8 col-sm-8">

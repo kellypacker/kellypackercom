@@ -1,17 +1,15 @@
 class ArtGroup < ActiveRecord::Base
-  has_many :artworks
-
   include RankedModel
+  retina!
+  has_many :artworks
   ranks :row_order
-
   has_attached_file :image,
     :styles => {
-      :large => "800x800#",
-      :list => "600x600#",
-      :thumb => "75x75#"
+      :list => "300x300#"
     },
+    :retina => { :quality => 80 },
     :convert_options => {
-      :thumb => "-quality 80 -strip"
+      :list => "-quality 80 -strip"
     }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
