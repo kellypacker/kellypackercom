@@ -3,13 +3,16 @@ class ArtGroup < ActiveRecord::Base
   retina!
   has_many :artworks
   ranks :row_order
+
   has_attached_file :image,
     :styles => {
-      :list => "300x300#"
+      :list => "300x300#",
+      :thumb => "75x75#"
     },
     :retina => { :quality => 80 },
     :convert_options => {
-      :list => "-quality 80 -strip"
+      :list => "-quality 80 -strip",
+      :thumb => "-quality 80 -strip"
     }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 

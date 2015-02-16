@@ -5,7 +5,8 @@ Personal website for kellypacker.com
 **Regenerate images**
 
 ```
-rake paperclip:refresh:thumbnails CLASS=Artwork
+rake paperclip:refresh CLASS=Artwork
+heroku run rake paperclip:refresh CLASS=ArtGroup
 ```
 
 ## Sitemap
