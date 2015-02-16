@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924032034) do
+ActiveRecord::Schema.define(version: 20150216053158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140924032034) do
     t.string   "slug"
     t.integer  "row_order",          default: 0, null: false
     t.text     "artist_statement"
+    t.text     "retina_dimensions"
   end
 
   create_table "artworks", force: true do |t|
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140924032034) do
     t.integer  "art_group_id"
     t.boolean  "prints_available"
     t.boolean  "framed"
+    t.text     "retina_dimensions"
   end
 
   create_table "media", force: true do |t|
