@@ -4,4 +4,6 @@
 # User-Agent: *
 # Disallow: /
 
-Sitemap: https://s3.amazonaws.com/kellypackercom/sitemaps/sitemap.xml.gz
+Sitemap: http://www.kellypacker.com/sitemap.xml.gz
+
+# Sitemap: http://kellypackercom.s3.amazonaws.com/sitemaps/sitemap_index.xml.gz
