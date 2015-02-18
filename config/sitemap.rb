@@ -1,5 +1,10 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.kellypacker.com"
+# The directory to write sitemaps to locally
+SitemapGenerator::Sitemap.public_path = 'tmp/'
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new
+SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['AWS_BUCKET']}.s3.amazonaws.com/"
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 # Put links creation logic here.
 #

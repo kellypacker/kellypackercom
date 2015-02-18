@@ -22,6 +22,8 @@ gem 'formtastic'
 gem 'clearance'
 gem 'redcarpet'
 gem 'draper', '~> 1.3'
+# upload sitemap to s3
+gem 'fog'
 # order
 gem 'ranked-model'
 # gem "meta_search",    '>= 1.1.0.pre'
