@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.0"
+ruby "2.2.3"
 
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -36,7 +36,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger'
+  # gem 'debugger'
   gem 'dotenv-rails'
 end
 
