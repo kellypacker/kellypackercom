@@ -42,7 +42,12 @@
       </li>
       <% end %>
       <% if @artwork.available %>
-        <li class="spacer"><%= number_to_currency(@artwork.price) %></li>
+        <li class="spacer">
+          <%= number_to_currency(@artwork.price) %>
+          <% if @artwork.framed %>
+          (framed)
+          <% end %>
+        </li>
         <% if @artwork.store_link? %>
         <%= link_to "Available for purchase online »", @artwork.store_link %>
         <% else %>
