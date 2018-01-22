@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.2.3"
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.10'
 gem 'pg'
 gem 'unicorn'
 
@@ -13,17 +13,17 @@ gem 'coffee-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem "autoprefixer-rails"
 gem 'uglifier', '>= 1.3.0'
-gem "paperclip", "~> 4.1"
+gem "paperclip", "~> 4.3.6"
 gem 'retina_rails', '~> 2.0.0'
 gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
 gem 'jquery-rails'
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 3'
 gem 'formtastic'
 gem 'clearance'
 gem 'redcarpet'
 gem 'draper', '~> 1.3'
 # upload sitemap to s3
-gem 'fog'
+gem 'fog-aws', '~> 2.0'
 # order
 gem 'ranked-model'
 # gem "meta_search",    '>= 1.1.0.pre'
