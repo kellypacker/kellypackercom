@@ -1,6 +1,14 @@
 $(function() {
-    addEventsToVideos();
+    // addEventsToVideos();
 });
+
+function onPlayerStateChange() {
+    console.log("state changed");
+}
+
+function onPlayerReady() {
+    console.log("READY");
+}
 
 function addEventsToVideos() {
     // This code loads the IFrame Player API code asynchronously.
@@ -26,4 +34,22 @@ function addEventsToVideos() {
             }
         });
     }
+}
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: 'REJybt3l-LY',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
 }
