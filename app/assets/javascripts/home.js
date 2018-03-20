@@ -13,7 +13,7 @@ function addEventsToVideos() {
     $('iframe').each(function() {
         var src = $(this).attr('src');
         console.log(src + '&enablejsapi=1&origin=http://selc.test');
-        $(this).attr('src', src + '&enablejsapi=1&origin=http://www.kellypacker.com');
+        // $(this).attr('src', src + '&enablejsapi=1&origin=http://www.kellypacker.com');
     });
     // This function takes the existing <iframe> (and YouTube player)
     // with id 'player1' and adds an event listener for state changes.
