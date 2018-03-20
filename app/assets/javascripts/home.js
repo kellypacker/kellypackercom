@@ -4,10 +4,10 @@ $(function() {
 
 function addEventsToVideos() {
     // This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // var tag = document.createElement('script');
+    // tag.src = "https://www.youtube.com/iframe_api";
+    // var firstScriptTag = document.getElementsByTagName('script')[0];
+    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     console.log($('iframe:first').attr('id'));
     var testID = $('iframe:first').attr('id');
     $('iframe').each(function() {
