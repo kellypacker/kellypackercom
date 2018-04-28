@@ -75,6 +75,7 @@ Kellypacker::Application.configure do
     # url: ':s3_domain_url',
     # path: '/:class/:attachment/:id_partition/:style/:filename',
     :storage => :s3,
+    :s3_region => 'us-east-1',
     :s3_credentials => {
       :bucket => ENV['AWS_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
