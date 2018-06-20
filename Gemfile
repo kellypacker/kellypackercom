@@ -4,7 +4,6 @@ ruby "2.2.3"
 
 gem 'rails', '4.2.10'
 gem 'pg'
-gem 'sqlite3', '~> 1.3.13'
 gem 'unicorn'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -34,6 +33,7 @@ gem 'newrelic_rpm'
 group :development do
   gem 'foreman'
   gem 'better_errors'
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 group :development, :test do
