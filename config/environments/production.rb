@@ -9,7 +9,7 @@ Kellypacker::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_files = false
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -31,7 +31,7 @@ Kellypacker::Application.configure do
   config.force_ssl = true
 
   # See everything in the log (default is :info)
-  config.log_level = :info
+  # config.log_level = :debug
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -66,9 +66,7 @@ Kellypacker::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # for activeadmin and heroku
-  config.assets.compile = false
-
-  config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js]
+  config.assets.compile = true
 
   config.eager_load = true
 
