@@ -64,6 +64,7 @@ module Kellypacker
 
     config.assets.precompile += ['manifest.css']
     config.assets.precompile += ['admin/manifest.css']
+    config.assets.precompile += ['admin/manifest.js']
 
     # cache for a year
     config.static_cache_control = "public, max-age=31536000"
