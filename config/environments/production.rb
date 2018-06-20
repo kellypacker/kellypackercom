@@ -66,7 +66,7 @@ Kellypacker::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # for activeadmin and heroku
-  config.assets.compile = true
+  #config.assets.compile = true
 
   config.eager_load = true
 
