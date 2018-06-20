@@ -4,6 +4,7 @@ ruby "2.2.3"
 
 gem 'rails', '4.2.10'
 gem 'pg'
+gem 'sqlite3'
 gem 'unicorn'
 
 gem 'sass-rails', '~> 4.0.3'
