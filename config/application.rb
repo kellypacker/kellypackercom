@@ -63,7 +63,7 @@ module Kellypacker
     #config.assets.initialize_on_precompile = false
 
     config.assets.precompile += ['manifest.css']
-    config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js]
+    config.assets.precompile += ['admin/manifest.css']
 
     # cache for a year
     config.static_cache_control = "public, max-age=31536000"
