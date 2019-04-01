@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.2.3"
+ruby "2.3.8"
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11.1'
 gem 'pg'
 gem 'unicorn'
 
@@ -19,7 +19,7 @@ gem 'simple_form', github: "plataformatec/simple_form", branch: "master"
 gem 'jquery-rails'
 gem 'aws-sdk', '~> 3'
 gem 'formtastic'
-gem 'clearance'
+gem 'clearance', '~> 1.16.2'
 gem 'redcarpet'
 gem 'draper', '~> 1.3'
 # upload sitemap to s3
