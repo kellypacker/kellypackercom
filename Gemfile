@@ -7,7 +7,7 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'compass-rails'
 gem 'coffee-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
